@@ -153,8 +153,8 @@
 				27C565401A932B59007FD10B /* reverbValue.m */,
 				27C9AF7C1AAB069D00E436B9 /* red_button.png */,
 				270F6F211A903B61007016F8 /* Supporting Files */,
-				270749C41AC7E9F300D71CC8 /* nextViewController.h */,
 				270749C51AC7E9F300D71CC8 /* nextViewController.m */,
+				270749C41AC7E9F300D71CC8 /* nextViewController.h */,
 				270749C61AC7E9F300D71CC8 /* nextViewController.xib */,
 			);
 			path = RecThroughUnit;
