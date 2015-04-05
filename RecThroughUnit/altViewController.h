@@ -13,9 +13,9 @@
 
 @class audioSetup;
 @class CaptureSessionController;
-
+//プロトコルとして<SubViewControllerDelegate>を宣言
 @interface altViewController : UIViewController
-<AVAudioRecorderDelegate,AVAudioPlayerDelegate>
+<AVAudioRecorderDelegate,AVAudioPlayerDelegate,nextViewControllerDelegate>
 {
     AVAudioRecorder *avRecorder;
     AVAudioPlayer *avPlayer;

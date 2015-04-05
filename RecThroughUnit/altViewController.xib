@@ -248,6 +248,12 @@
                                     <action selector="segueA:" destination="kuV-j4-c8v" eventType="touchUpInside" id="PJg-1p-gMm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-w5-2gX">
+                                <rect key="frame" x="75" y="546" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -272,6 +278,7 @@
                         <outlet property="randomizeReflectionSlider" destination="hId-K3-PMs" id="68B-rj-vgB"/>
                         <outlet property="startButton" destination="guq-J0-9UE" id="7Cl-eC-SpI"/>
                         <outlet property="startButton2" destination="vFF-df-Dbb" id="zP3-cf-Cd1"/>
+                        <outlet property="testLabel1" destination="wbY-w5-2gX" id="Vc3-bg-jX9"/>
                     </connections>
                 </viewController>
             </viewControllers>

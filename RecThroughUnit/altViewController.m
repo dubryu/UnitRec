@@ -29,6 +29,9 @@
 @end
 
 @implementation altViewController
+{//親画面のラベル
+    __weak IBOutlet UILabel *testLabel1;
+}
 @synthesize portType;
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -41,6 +44,13 @@
 //    }
 //    return self;
 //}
+
+//子画面から返された文字列を受け取るためのデリゲートメソッド
+- (void)returnString:(NSString *)str{
+    
+    //ラベルの文字列としてセット
+    testLabel1.text= str;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -331,7 +341,17 @@
 }
 -(IBAction)segueA:(id)sender{
     nextViewController *controller = [[nextViewController alloc] initWithNibName:@"nextViewController" bundle:nil];
-    [self.navigationController pushViewController:controller animated:YES];
+    //自身のインスタンスをデリゲートとしてセット
+    controller.delegate = self;
+    
+    //子画面のインスタンスに文字列を渡す
+    controller.labelText = @"親から渡された文字列";
+    
+    //次画面に遷移する
+    [self presentViewController:controller animated:YES completion:^ {
+        //遷移完了時の処理はここに書く
+    }];
+//    [self.navigationController pushViewController:controller animated:YES];
 }
 - (void)playRecordedAudio2
 {

@@ -11,13 +11,31 @@
 #import "reverbValue.h"
 @class altViewController;
 
+@protocol nextViewControllerDelegate <NSObject>
+
+//デリゲートメソッドを宣言
+//デリゲート先となるクラスはこのデリゲートメソッドを実装する
+- (void)returnString:(NSString*)str;
+
+@end
+
 @interface nextViewController : UIViewController{
     __weak IBOutlet UILabel *gainsLabelnext;
     reverbValue *reverbValueNext;
     int userParam;
 }
--(IBAction)changeReverbGain:(id)sender;
+
 @property int userParam;
--(IBAction)playOtherClassPlayer:(id)sender;
+
+
+//デリゲート先になっているインスタンスを参照するためのプロパティを定義
+@property (nonatomic, assign) id<nextViewControllerDelegate> delegate;
+
+//「戻る」ボタンが押された時に呼び出されるメソッド
+- (IBAction)back:(UIButton *)sender;
+
+//渡された文字列を格納するプロパティ
+@property (nonatomic, retain)NSString *labelText;
+
 @end
 
